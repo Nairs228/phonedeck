@@ -1,0 +1,41 @@
+.topTable {
+  display: flex;
+  justify-content: space-between;
+}
+.buttonTop {
+  background-color: rgb(119, 93, 166);
+}
+button.active {
+  background-color: #775da6; /* Or any color you prefer */
+  color: white;
+}
+
+button.inactive {
+  background-color: lightgray;
+  color: black;
+}
+
+.backButton {
+  background-color: rgb(119, 93, 166);
+}
+.backBlock {
+  display: flex;
+  justify-content: space-between;
+}
+.blockRating {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.buttonRatting {
+  background-color: #775da6;
+}
+
+@media (max-width: 950px) {
+  .blockRating {
+    display: block;
+  }
+  .buttonRatting {
+    margin: 15px 7.5px;
+  }
+}

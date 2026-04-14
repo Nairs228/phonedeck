@@ -1,0 +1,41 @@
+.timeToBonus {
+  font-size: 14px;
+  color: #898989;
+  margin-top: 5px;
+}
+.articlesButtons {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 143px;
+  height: 40px;
+  margin-right: 15px;
+}
+/* Add this to your Bonuses.module.css */
+.button {
+  margin: 5px;
+}
+
+button.active {
+  background-color: #775da6; /* Or any color you prefer */
+  color: white;
+}
+
+button.inactive {
+  background-color: lightgray;
+  color: black;
+}
+
+@media (max-width: 950px) {
+  .articlesButtons {
+    display: block;
+  }
+  .buttons {
+    margin-top: 15px;
+  }
+}

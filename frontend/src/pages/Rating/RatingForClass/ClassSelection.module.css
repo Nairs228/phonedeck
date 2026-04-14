@@ -1,0 +1,26 @@
+.link {
+  font-size: 20px; /* Размер текста */
+  padding: 10px 15px; /* Отступы вокруг текста */
+  color: #333; /* Темный цвет текста */
+  background-color: #f0f0f0; /* Светло-серый фон */
+  border: 1px solid #ccc; /* Светло-серая рамка */
+  border-radius: 5px; /* Закругленные края */
+  text-decoration: none; /* Убираем подчеркивание */
+  display: inline-block; /* Позволяет использовать padding */
+  transition:
+    background-color 0.3s,
+    color 0.3s,
+    border-color 0.3s; /* Плавный переход эффектов */
+  cursor: pointer; /* Курсор указывает, что элемент кликабельный */
+  margin: 15px;
+}
+
+.link:hover {
+  background-color: #e0e0e0; /* Темно-серый фон при наведении */
+  color: #000; /* Темный текст при наведении */
+  border-color: #999; /* Изменяем цвет рамки при наведении */
+}
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}

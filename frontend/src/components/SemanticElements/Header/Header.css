@@ -1,0 +1,64 @@
+.logo-block {
+  display: flex;
+  text-align: center;
+  width: 17.36%;
+  margin-left: 15px;
+}
+
+h1 {
+  font-size: 21px;
+}
+.highlighted {
+  background-color: yellow; /* Цвет подсветки */
+}
+ul,
+li {
+  list-style: none;
+}
+
+.logo-block a {
+  margin: 0 10px 0 10px;
+}
+
+.header-top {
+  display: flex;
+  align-items: center; /* Центриуем элементы по вертикали */
+}
+
+.header-right-block {
+  margin-left: auto; /* Отталкиваем правый блок в конец строки */
+  display: flex; /* Делаем контейнер для значков flex */
+  align-items: center; /* Центрируем содержимое по вертикали */
+}
+
+.right-block {
+  display: flex;
+  align-items: center;
+}
+
+.right-block li {
+  display: flex;
+  margin: 0 10px 0 10px;
+  align-items: center;
+}
+
+.search input {
+  background-image: url('../../../assets/svgs/forTemplate/search.svg'); /* Убедитесь, что путь корректен */
+  background-position: 5px center;
+  background-repeat: no-repeat;
+  padding-left: 25px;
+  border: none;
+  background-color: #f9f9f9;
+  width: 300px;
+  height: 4vh;
+  border-radius: 8px;
+  margin-left: 30px;
+}
+
+.account-information {
+  margin-left: 10px;
+}
+
+.account-information-2 {
+  color: #898989;
+}

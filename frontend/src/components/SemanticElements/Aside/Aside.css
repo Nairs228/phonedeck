@@ -1,0 +1,46 @@
+.aside {
+  transition: transform 0.3s ease; /* Для анимации при открытии/закрытии */
+}
+
+.nav {
+  width: 100%;
+}
+
+.nav.open {
+  display: block; /* Показать, когда открыто */
+}
+
+.nav-list {
+  list-style-type: none; /* Убираем маркеры списка */
+}
+
+.nav-item {
+  display: flex; /* Используем Flexbox для отображения значка и текста в строку */
+  align-items: center; /* Центрируем элементы вертикально */
+  font-size: 16px;
+  width: 90%;
+  height: 7.5vh;
+}
+
+.nav-icon {
+  width: 24px; /* Укажите желаемую ширину значков */
+  margin: 0 10px 0 15px; /* Отступ между значком и текстом */
+}
+
+.nav-item a {
+  display: flex; /* Используем flex для выравнивания */
+  align-items: center; /* Выравнивание по центру по вертикали */
+  text-decoration: none; /* Убираем подчеркивание */
+  color: inherit; /* Устанавливаем цвет текста в цвет родительского элемента */
+  font-size: inherit; /* Наследуем размер шрифта от родителя */
+  margin: 0; /* Убираем отступы */
+  padding: 0; /* Убираем внутренние отступы */
+  transition: none; /* Отключаем переходы, если они есть */
+  width: 100%;
+  height: 7.5vh;
+}
+
+.nav-item:hover {
+  background-color: rgba(119, 93, 166, 0.12); /* Цвет фона при наведении */
+  border-radius: 12px;
+}

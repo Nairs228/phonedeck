@@ -1,0 +1,9 @@
+node_modules/
+build/
+__pycache__/
+*.pyc
+devices.db
+*.db-journal
+venv/
+.env
+.DS_Store

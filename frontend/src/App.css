@@ -1,0 +1,55 @@
+.App {
+  display: grid;
+  grid-template-columns: 17.56% auto; /* Первая колонка 17.36%, вторая - остальное пространство */
+  grid-template-rows: 5% 90% auto auto; /* Первая строка 5rem, вторая для main, третья для footer */
+  max-width: 1920px; /* Ширина сетки на всю ширину */
+  min-height: 100vh; /* Убедитесь, что высота равна высоте окна */
+  background-color: #f9f9f9;
+  font-family: 'Inter', sans-serif;
+  gap: 0; /* Уборка промежутков между элементами */
+  margin: auto;
+}
+
+@media (max-width: 950px) {
+  .App {
+    grid-template-columns: 30.56% auto; /* Первая колонка 17.36%, вторая - остальное пространство */
+  }
+}
+@media (max-width: 550px) {
+  .App {
+    grid-template-columns: 50.56% auto; /* Первая колонка 17.36%, вторая - остальное пространство */
+  }
+}
+.header {
+  grid-column: 1 / 3; /* Занимает обе колонки (1 и 2) */
+  grid-row: 1; /* Занимает первую строку */
+  background-color: white;
+  display: grid; /* Используем Grid */
+  align-items: center; /* Центрируем содержимое по вертикали */
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.aside {
+  background-color: white;
+  border-right: 1px solid #dcdcdc;
+  gap: 0;
+}
+
+.footer {
+  grid-column: 1 / 1; /* Занимает обе колонки */
+  grid-row: 4;
+  background-color: white;
+  border-right: 1px solid #dcdcdc; /* Граница сверху */
+}
+
+.main {
+  grid-column: 2 / 3; /* Занимает вторую колонку */
+  grid-row: 2 / 3; /* Занимает вторую строку */
+  padding: 2%; /* Отступы вокруг main */
+  background-color: #f9f9f9;
+}
+
+/* Убедитесь, что содержимое имеет нормальный стиль */
+.station-info {
+  font-size: 36px;
+}

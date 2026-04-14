@@ -1,0 +1,9 @@
+.lightRow {
+  background-color: #f9f9f9; /* Светло-серый цвет для нечетных строк */
+}
+.darkRow {
+  background-color: white; /* Белый цвет для четных строк */
+}
+.selected {
+  background-color: rgba(77, 26, 172, 0.12);
+}

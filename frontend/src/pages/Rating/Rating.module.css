@@ -1,0 +1,31 @@
+.topTable {
+  display: flex;
+  justify-content: space-between;
+}
+.buttonTop {
+  background-color: rgb(119, 93, 166);
+}
+button.active {
+  background-color: #775da6; /* Or any color you prefer */
+  color: white;
+}
+
+button.inactive {
+  background-color: lightgray;
+  color: black;
+}
+.buttonChoice {
+  background-color: rgb(119, 93, 166);
+}
+@media (max-width: 950px) {
+  .topTable {
+    display: block;
+  }
+  button.active {
+    margin: 15px 7.5px;
+  }
+
+  button.inactive {
+    margin: 15px 7.5px;
+  }
+}

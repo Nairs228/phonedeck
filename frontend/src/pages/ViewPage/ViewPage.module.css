@@ -1,0 +1,41 @@
+.welcome {
+  font-size: 14px;
+  color: #898989;
+  margin-top: 5px;
+}
+.whiteBlock {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 12px;
+  width: 367px;
+  height: 150px;
+  box-shadow: 0 2px 4px rgba(140, 124, 124, 0.2);
+  margin-top: 30px;
+}
+.whiteBlockP {
+  font-size: 14px;
+  font-weight: 400;
+  color: #898989;
+  margin-top: 10px;
+}
+
+.whiteBlockH3 {
+  font-size: 24px;
+  font-weight: 900;
+}
+.whiteBlockInf {
+  margin: 5%;
+}
+.whiteBlockImg {
+  margin-top: 35px;
+}
+.whiteBlockPhone {
+  margin: 5%;
+}
+.whiteBlockPersent {
+  font-size: 12px;
+  font-weight: 300;
+  color: #898989;
+  margin-top: 50px;
+}
