@@ -621,6 +621,9 @@ arduino-cli upload --fqbn esp8266:esp8266:nodemcuv2 --port /dev/cu.usbserial-000
 - Проверить доступность данных: `curl http://109.73.206.169/get_data`
 - Проверить что концевики срабатывают (данные отправляются при **отпускании** концевика)
 - Проверить соединение Arduino ↔ ESP8266 (провода TX/RX)
+- Проверить локально `curl -X POST http://109.73.206.169/save \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Иванов С.М.","model":"Samsung","charge":"85%","connection_time":"14:30","disconnection_time":"15:45"}'`. Если в `/get_data` отображается приход данных, то проверить в коде `arduino`, что отправка запроса не содержит порта `:500x`
 
 ### Сайт не открывается
 
