@@ -8,10 +8,14 @@ import rating from '../../../assets/svgs/forTemplate/rating.svg'
 import shield from '../../../assets/svgs/forTemplate/shield.svg'
 import Bonuses from '../../../assets/svgs/forTemplate/Bonuses.svg'
 import station from '../../../assets/svgs/forTemplate/station.svg'
+import accountIcon from '../../../assets/svgs/forTemplate/account.svg'
+import { useAuth } from '../../../context/AuthContext'
 import './Aside.css'
 
 function Aside({ isNavOpen }) {
   const [click] = useSound(soundClickForPages)
+  const { user } = useAuth()
+  const isAdmin = Boolean(user?.is_admin)
   return (
     <aside className={`aside ${isNavOpen ? 'open' : ''}`}>
       {isNavOpen && (
@@ -25,6 +29,22 @@ function Aside({ isNavOpen }) {
                 Обзор
               </Link>
             </li>
+            {user ? (
+              <li className="nav-item">
+                <Link to="/profile" onClick={click}>
+                  <img src={accountIcon} alt="Профиль" className="nav-icon" />
+                  Профиль
+                </Link>
+              </li>
+            ) : null}
+            {isAdmin ? (
+              <li className="nav-item">
+                <Link to="/admin" onClick={click}>
+                  <img src={shield} alt="Админ" className="nav-icon" />
+                  Админ-панель
+                </Link>
+              </li>
+            ) : null}
             <li className="nav-item">
               <Link to="/contacts" onClick={click}>
                 {' '}

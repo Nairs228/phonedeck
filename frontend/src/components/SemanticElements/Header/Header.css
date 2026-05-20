@@ -62,3 +62,46 @@ li {
 .account-information-2 {
   color: #898989;
 }
+
+.header-account-li {
+  max-width: 220px;
+}
+
+.account-fio {
+  max-width: 210px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.account-auth-link {
+  display: block;
+  font-size: 14px;
+  color: #1a1a1a;
+  text-decoration: none;
+  margin-bottom: 2px;
+}
+
+.account-auth-link.muted {
+  color: #898989;
+  font-size: 13px;
+}
+
+.account-auth-link:hover {
+  text-decoration: underline;
+}
+
+.header-logout {
+  margin-top: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  background: #fff;
+  color: #1a1a1a;
+  cursor: pointer;
+}
+
+.header-logout:hover {
+  background: #f9f9f9;
+}

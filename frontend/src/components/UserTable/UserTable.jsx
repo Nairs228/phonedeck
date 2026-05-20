@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import axios from "axios"
+import { apiUrl } from "../../api"
 import Pagination from "../Pagination/Pagination" // Импортируем компонент пагинации
 import "./GlobalUserTable.css" // Импортируем стили
 
@@ -15,7 +16,7 @@ function UserTable() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("/get_data")
+        const response = await axios.get(apiUrl("/get_data"))
         if (Array.isArray(response.data)) {
           setDataTable(response.data)
         } else {

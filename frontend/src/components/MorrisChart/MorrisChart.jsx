@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { Bar } from "react-chartjs-2"
+import { apiUrl } from "../../api"
 import styles from "./MorrisChart.module.css"
 import {
   Chart as ChartJS,
@@ -16,12 +17,20 @@ const MorrisChart = () => {
   const [chartData, setChartData] = useState(null)
 
   useEffect(() => {
-    fetch("/get_data")
+    fetch(apiUrl("/get_data"))
       .then((response) => response.json())
       .then((data) => {
+        if (!Array.isArray(data)) {
+          console.error("Ожидался массив от /get_data")
+          return
+        }
         const timeCounts = {}
 
-        data.forEach(({ connection_time }) => {
+        data.forEach((row) => {
+          const connection_time = row.connection_time
+          if (!connection_time || typeof connection_time !== "string") {
+            return
+          }
           const hour = connection_time.split(":")[0] + ":00"
           timeCounts[hour] = (timeCounts[hour] || 0) + 1
         })

@@ -10,12 +10,36 @@ import ViewPage from "../pages/ViewPage/ViewPage";
 import RatingForClass from "../pages/Rating/RatingForClass/RatingForClass";
 import ClassSelection from "../pages/Rating/RatingForClass/ClassSelection";
 import RatingForSchool from "../pages/Rating/RatingForSchool/RatingForSchool";
+import Login from "../pages/Auth/Login";
+import Register from "../pages/Auth/Register";
+import Profile from "../pages/Profile/Profile";
+import Admin from "../pages/Admin/Admin";
+import RequireAuth from "../components/Auth/RequireAuth";
+import RequireAdmin from "../components/Auth/RequireAdmin";
 
 function Router({ toggleNav, isNavOpen }) {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/" element={<MainLayout toggleNav={toggleNav} isNavOpen={isNavOpen} />}>
+          <Route
+            path="profile"
+            element={
+              <RequireAuth>
+                <Profile />
+              </RequireAuth>
+            }
+          />
+          <Route
+            path="admin"
+            element={
+              <RequireAdmin>
+                <Admin />
+              </RequireAdmin>
+            }
+          />
           <Route path="viewPage" element={<ViewPage />} />
           <Route path="contacts" element={<Contacts />} />
           <Route path="statistics" element={<Statistics />} />
